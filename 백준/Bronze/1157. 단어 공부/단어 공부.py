@@ -5,8 +5,7 @@ N_list = list(set(N))
 
 N_count = []
 for i in N_list:
-    count = N.count
-    N_count.append(count(i))
+    N_count.append(N.count(i))
 if N_count.count(max(N_count)) > 1:
     print("?")
 else:
