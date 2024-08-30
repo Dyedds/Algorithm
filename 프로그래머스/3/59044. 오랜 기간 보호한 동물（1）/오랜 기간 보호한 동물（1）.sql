@@ -1,0 +1,9 @@
+-- 코드를 입력하세요
+SELECT NAME, DATETIME
+FROM ANIMAL_INS
+WHERE ANIMAL_ID NOT IN (SELECT b.ANIMAL_ID
+                       FROM ANIMAL_INS a
+                       JOIN ANIMAL_OUTS b
+                       ON a.ANIMAL_ID = b.ANIMAL_ID)
+ORDER BY DATETIME
+LIMIT 3;
